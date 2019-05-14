@@ -1,0 +1,48 @@
+// main {
+//   background-image: url(./../../assets/images/levelOne.png);
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   position: relative;
+//   height: 800px;
+//   width: 100vw;
+// }
+.wrapper {
+  width: 700px;
+  margin: 0 auto;
+  background: url(./../../assets/images/lvlOne.png) no-repeat 0 0;
+  background-size: cover;
+}
+.background {
+  width: 700px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+}
+main {
+  position: relative;
+}
+.mario {
+  transition: left 1s linear;
+  width: 30px;
+  position: absolute;
+  bottom: 10%;
+  left: 100px;
+  align-self: center;
+}
+.target {
+  width: 50px;
+  position: absolute;
+  right: 10px;
+  bottom: 48%;
+  transform: rotate();
+  animation: spin infinite 10s linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
