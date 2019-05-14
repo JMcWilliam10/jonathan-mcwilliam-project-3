@@ -1,0 +1,24 @@
+Create a background image of first level
+add mario image
+add coin image
+add target image
+
+position each of the images appropriately according to the wireframe. 
+
+Create an levelChanging incrementor variable which will be referenced in order to determine the positioning of mario and the target in the second levels etc.
+
+Create an array for the background image attributes
+create an array for marios position throughout the levels
+create an array for the various target positions
+create an array of questions and answers
+
+use conditional logical to determine whether the user input is correct
+
+On form submit
+
+if logic is correct add a value to the score and move to the next level
+if false move to the next level without adding anything to the score
+regardless of if condition is met, increment the levelChanging incrementor and fade out the level, mario and the target.
+after fade out complete, fade in next level.
+
+repeat.

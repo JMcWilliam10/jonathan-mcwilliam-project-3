@@ -15,7 +15,7 @@
     <main class="background">
       <div class="wrapper">
         <div class="coin">
-          <img src="./assets/images/coin.gif" alt="">
+          <img src="./assets/images/coin.gif" alt="" />
         </div>
         <div class="target">
           <img src="./assets/images/target.png" alt="target icon" />
@@ -25,12 +25,21 @@
         </div>
       </div>
       <div class="score">
-        <p>932 = </p>
+        <p class="scoreValue">0 =</p>
       </div>
     </main>
+    <div class="questions">
+      <p>Using flexbox properties how would you align mario to the target</p>
+    </div>
     <form action="">
-      <input type="text" />
-      <button type="submit" value="submit" />
+      <label for="">justify-content:</label>
+      <select name="justify-content">
+        <option value="flex-end">flex-end;</option>
+        <option value="flex-start">flex-start</option>
+        <option value="center">center</option>
+        <option value="space-around">space around</option>
+      </select>
+      <input type="submit" value="submit" />
     </form>
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
