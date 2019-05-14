@@ -38,6 +38,18 @@ main {
   transform: rotate();
   animation: spin infinite 10s linear;
 }
+.coin {
+  width: 50px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+.score {
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  font-size: 2rem;
+}
 @keyframes spin {
   from {
     transform: rotate(0deg);

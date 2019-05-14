@@ -184,6 +184,19 @@ img {
   max-width: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#051937), color-stop(#004d7a), color-stop(#008793), color-stop(#00bf72), to(#a8eb12));
   background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
@@ -206,7 +219,7 @@ form {
 .wrapper {
   width: 700px;
   margin: 0 auto;
-  background: url(./../assets/images/lvlOne.png) no-repeat 0 0;
+  background: url(./../../assets/images/lvlOne.png) no-repeat 0 0;
   background-size: cover;
 }
 
@@ -244,6 +257,20 @@ main {
           transform: rotate();
   -webkit-animation: spin infinite 10s linear;
           animation: spin infinite 10s linear;
+}
+
+.coin {
+  width: 50px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
+.score {
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  font-size: 2rem;
 }
 
 @-webkit-keyframes spin {
