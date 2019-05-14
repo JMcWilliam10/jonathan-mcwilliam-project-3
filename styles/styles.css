@@ -184,14 +184,29 @@ img {
   max-width: 100%;
 }
 
+body {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#051937), color-stop(#004d7a), color-stop(#008793), color-stop(#00bf72), to(#a8eb12));
+  background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
 form {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+  padding-bottom: 100px;
 }
 
 .wrapper {
   width: 700px;
   margin: 0 auto;
-  background: url(./../../assets/images/lvlOne.png) no-repeat 0 0;
+  background: url(./../assets/images/lvlOne.png) no-repeat 0 0;
   background-size: cover;
 }
 
