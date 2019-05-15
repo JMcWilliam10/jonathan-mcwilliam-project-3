@@ -227,21 +227,35 @@ form div {
   width: 100%;
 }
 
-select {
-  background: blue;
+select,
+[type="submit"] {
+  text-align: left;
+  background: black;
   color: white;
   border: none;
-  padding: 10px;
+  font-size: 15px;
+  height: 30px;
+  padding: 5px;
+  width: 100px;
+  margin: 3px;
+  border-radius: 5px;
 }
 
-.wrapper {
-  width: 700px;
+[type="submit"] {
+  width: 70px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.levelBackground {
+  width: 100vw;
   margin: 0 auto;
   background: url(./../../assets/images/mario-1-1.gif) no-repeat 0 0;
   background-size: cover;
   background-position: 2% 0;
   -webkit-transition: 3s ease;
   transition: 3s ease;
+  border: 10px solid black;
 }
 
 .background {
@@ -257,9 +271,11 @@ main {
   position: relative;
 }
 
-.question {
+.questions {
   text-align: center;
   margin: 0 auto;
+  width: 50%;
+  padding: 20px 0;
 }
 
 .mario {
@@ -301,8 +317,10 @@ main {
   font-size: 2rem;
 }
 
-.questions {
-  padding-top: 100px;
+.nes {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 @-webkit-keyframes spin {

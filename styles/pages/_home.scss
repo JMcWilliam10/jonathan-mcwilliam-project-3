@@ -1,19 +1,15 @@
-// main {
-//   background-image: url(./../../assets/images/levelOne.png);
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   position: relative;
-//   height: 800px;
-//   width: 100vw;
-// }
-.wrapper {
-  width: 700px;
+.container {
+}
+
+.levelBackground {
+  // width: 700px;
+  width: 100vw;
   margin: 0 auto;
   background: url(./../../assets/images/mario-1-1.gif) no-repeat 0 0;
   background-size: cover;
   background-position: 2% 0;
   transition: 3s ease;
+  border: 10px solid black;
 }
 .background {
   width: 700px;
@@ -24,9 +20,11 @@
 main {
   position: relative;
 }
-.question {
+.questions {
   text-align: center;
   margin: 0 auto;
+  width: 50%;
+  padding: 20px 0;
 }
 .mario {
   transition: left 1s linear;
@@ -57,8 +55,10 @@ main {
   right: 70px;
   font-size: 2rem;
 }
-.questions {
-  padding-top: 100px;
+.nes {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
 }
 @keyframes spin {
   from {
