@@ -28,18 +28,31 @@
         <p class="scoreValue">0 =</p>
       </div>
     </main>
-    <div class="questions">
-      <p>Using flexbox properties how would you align mario to the target</p>
+    <div>
+      <p class="questions">
+        Using flexbox properties how would you align mario to the target
+      </p>
     </div>
     <form action="">
-      <label for="">justify-content:</label>
-      <select name="justify-content">
-        <option value="flex-end">flex-end;</option>
-        <option value="flex-start">flex-start</option>
-        <option value="center">center</option>
-        <option value="space-around">space around</option>
-      </select>
-      <input type="submit" value="submit" />
+      <div>
+        <label for="">justify-content:</label>
+        <select class="firstQuestion" name="justify-content">
+          <option value="flex-end">flex-end;</option>
+          <option value="flex-start">flex-start</option>
+          <option value="center">center</option>
+          <option value="space-around">space around</option>
+        </select>
+      </div>
+      <div>
+        <label for="">align-content</label>
+        <select class="secondQuestion" name="justify-content">
+          <option value="flex-start">flex-start;</option>
+          <option value="space-between">space-between</option>
+          <option value="center">center</option>
+          <option value="baseline">baseline</option>
+        </select>
+        <input type="submit" value="submit" />
+      </div>
     </form>
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"

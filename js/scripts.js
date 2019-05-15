@@ -1,8 +1,13 @@
 let incrementor = 0;
-let levels = ["lvlOne", "lvlTwo"];
-let levelTwo = "(./../../assets/images/lvlOne.png)";
+let levelIncrementor = 2;
 
-class Level;
+const questionArr = [
+  "Using flexbox properties how would you align mario to the target",
+  "question 2",
+  "question 3",
+  "question 4",
+  "question 5"
+];
 
 $(document).ready(function() {
   $(".mario").on("click", function() {
@@ -10,25 +15,29 @@ $(document).ready(function() {
   });
   $("form").on("submit", function(e) {
     e.preventDefault();
-    let userChoice = $("select").val();
-    if (userChoice === "flex-end") {
+    let firstQuestion = $(".firstQuestion").val();
+    let secondQuestion = $(".secondQuestion").val();
+    if (firstQuestion === "flex-end" && secondQuestion === "center") {
       incrementor++;
+      positionIncrementor = () => {};
       $(".scoreValue").html(incrementor);
       $(".mario").css({ left: "93%", bottom: "38.5%" });
       $(".background").toggleClass("animated fadeOut delay-1s");
       setTimeout(function() {
         $(".background").toggleClass("animated fadeOut delay-1s");
         $(".wrapper").css("background-position", "10% 0");
-        $(".mario").css({ left: "15%" });
-      }, 3000);
+        $(".mario").css({ left: `${levelIncrementor + 15}%` });
+        $(".target").css({ right: `46%`, bottom: "26%" });
+        $(".questions").text("Question 2");
+      }, 2000);
     } else {
-      $(".mario").css({ left: "93%", bottom: "38.5%" });
-      $(".background").toggleClass("animated fadeOut delay-1s");
+      $(".background").toggleClass("animated fadeOut");
       setTimeout(function() {
+        $(".mario").css({ left: "93%", bottom: "38.5%" });
         $(".background").toggleClass("animated fadeOut delay-1s");
         $(".wrapper").css("background-position", "10% 0");
-        $(".mario").css({ left: "15%" });
-      }, 3000);
+        $(".mario").css({ left: `${levelIncrementor + 15}%` });
+      }, 2000);
     }
   });
 });

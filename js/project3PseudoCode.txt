@@ -12,7 +12,7 @@ create an array for marios position throughout the levels
 create an array for the various target positions
 create an array of questions and answers
 
-use conditional logical to determine whether the user input is correct
+use conditional logic to determine whether the user input is correct
 
 On form submit
 
