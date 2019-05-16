@@ -12,68 +12,103 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <main class="background">
-      <div class="levelBackground">
-        <div class="coin">
-          <img src="./assets/images/coin.gif" alt="" />
-        </div>
-        <div class="target">
-          <img src="./assets/images/target.png" alt="target icon" />
-        </div>
-        <div class="mario">
-          <img src="./assets/images/mario.png" alt="mario icon" />
-        </div>
+    <div class="flex">
+      <div class="title">
+        <h1></h1>
       </div>
-      <div class="score">
-        <p class="scoreValue">0 =</p>
-      </div>
-    </main>
+      <div class="border">
+        <main class="background">
+          <div class="levelBackground pseudoTv">
+            <div class="tv">
+              <img src="./assets/images/80s-tv.png" alt="" />
+            </div>
 
-    <div class="secondarySection">
-      <p class="questions">
-        Using flexbox properties how would you align mario to the target
-      </p>
-    </div>
+            <div class="coin">
+              <img src="./assets/images/coin.gif" alt="" />
+            </div>
+            <div class="target">
+              <img src="./assets/images/target.png" alt="target icon" />
+            </div>
+            <div class="mario">
+              <img src="./assets/images/mario.png" alt="mario icon" />
+            </div>
+          </div>
+          <div class="score">
+            <p class="scoreValue">0 =</p>
+          </div>
+        </main>
+      </div>
 
-    <form action="">
-      <div>
-        <label class="subQuestion1" for="">justify-content:</label>
-        <select class="firstQuestion" name="justify-content">
-          <option class="subQuestion1Option1" value="flex-end"
-            >flex-end;</option
-          >
-          <option class="subQuestion1Option2" value="flex-start"
-            >flex-start</option
-          >
-          <option class="subQuestion1Option3" value="center">center</option>
-          <option class="subQuestion1Option4" value="space-around"
-            >space around</option
-          >
-        </select>
+      <div class="secondarySection">
+        <p class="questions">
+          Using flexbox properties how would you align mario to the target
+        </p>
       </div>
-      <div>
-        <label class="subQuestion2" for="">align-content</label>
-        <select class="secondQuestion" name="justify-content">
-          <option class="subQuestion2Option1" value="flex-start"
-            >flex-start;</option
-          >
-          <option class="subQuestion2Option2" value="space-between"
-            >space-between</option
-          >
-          <option class="subQuestion2Option3" value="center">center</option>
-          <option class="subQuestion2Option4" value="baseline">baseline</option>
-        </select>
-      </div>
-      <input type="submit" value="submit" />
-    </form>
-    <!-- <div class="nes">
+
+      <form action="">
+        <div>
+          <label class="subQuestion1" for="">justify-content:</label>
+          <select class="firstQuestion" name="justify-content">
+            <option class="subQuestion1Option1" value="flex-end"
+              >flex-end;</option
+            >
+            <option class="subQuestion1Option2" value="flex-start"
+              >flex-start</option
+            >
+            <option class="subQuestion1Option3" value="center">center</option>
+            <option class="subQuestion1Option4" value="space-around"
+              >space around</option
+            >
+          </select>
+        </div>
+        <div>
+          <label class="subQuestion2" for="">align-content</label>
+          <select class="secondQuestion" name="justify-content">
+            <option class="subQuestion2Option1" value="flex-start"
+              >flex-start;</option
+            >
+            <option class="subQuestion2Option2" value="space-between"
+              >space-between</option
+            >
+            <option class="subQuestion2Option3" value="center">center</option>
+            <option class="subQuestion2Option4" value="baseline"
+              >baseline</option
+            >
+          </select>
+        </div>
+        <input type="submit" value="submit" />
+      </form>
+      <!-- <div class="nes">
       <img src="./assets/images/Nes_controller.svg" alt="" />
     </div> -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/scripts.js"></script>
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyAqu1APOFV5cF35hwj5Pal6FJbHuO0siFA",
+          authDomain: "firstdatabase-d2990.firebaseapp.com",
+          databaseURL: "https://firstdatabase-d2990.firebaseio.com",
+          projectId: "firstdatabase-d2990",
+          storageBucket: "firstdatabase-d2990.appspot.com",
+          messagingSenderId: "955839676466",
+          appId: "1:955839676466:web:14ca03aa4894b1dd"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const dbRef = firebase.database().ref();
+      </script>
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"
+      ></script>
+      <script src="./js/scripts.js"></script>
+    </div>
   </body>
 </html>

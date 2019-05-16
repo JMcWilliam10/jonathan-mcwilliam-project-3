@@ -201,11 +201,6 @@ p {
   text-align: center;
 }
 
-body {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#051937), color-stop(#004d7a), color-stop(#008793), color-stop(#00bf72), to(#a8eb12));
-  background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-}
-
 form {
   text-align: center;
   display: -webkit-box;
@@ -247,6 +242,10 @@ select,
   margin: 0 auto;
 }
 
+.title {
+  height: 200px;
+}
+
 .levelBackground {
   width: 100vw;
   margin: 0 auto;
@@ -255,7 +254,8 @@ select,
   background-position: 2% 0;
   -webkit-transition: 3s ease;
   transition: 3s ease;
-  border: 10px solid black;
+  -webkit-filter: brightness(1.45);
+          filter: brightness(1.45);
 }
 
 .background {
@@ -267,7 +267,24 @@ select,
   display: flex;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#051937), color-stop(#004d7a), color-stop(#008793), color-stop(#00bf72), to(#a8eb12));
+  background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  height: 100vh;
+  z-index: 2;
+}
+
 main {
+  margin-top: 500px;
   position: relative;
 }
 
@@ -276,6 +293,14 @@ main {
   margin: 0 auto;
   width: 50%;
   padding: 20px 0;
+}
+
+.tv {
+  position: absolute;
+  top: -75px;
+  bottom: -20px;
+  left: -75px;
+  right: -280px;
 }
 
 .mario {
@@ -321,6 +346,30 @@ main {
   width: 50%;
   text-align: center;
   margin: 0 auto;
+}
+
+.secondarySection {
+  margin-top: 130px;
+}
+
+.background:before {
+  content: "";
+  color: black;
+  background: black;
+  width: 100%;
+  position: absolute;
+  height: 100px;
+  bottom: -100px;
+}
+
+.pseudoTv:before {
+  content: "";
+  color: black;
+  background: black;
+  width: 100%;
+  position: absolute;
+  height: 60px;
+  top: -50px;
 }
 
 @-webkit-keyframes spin {

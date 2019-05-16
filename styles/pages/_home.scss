@@ -1,4 +1,5 @@
-.container {
+.title {
+  height: 200px;
 }
 
 .levelBackground {
@@ -9,7 +10,8 @@
   background-size: cover;
   background-position: 2% 0;
   transition: 3s ease;
-  border: 10px solid black;
+  // border: 10px solid black;
+  filter: brightness(1.45);
 }
 .background {
   width: 700px;
@@ -17,7 +19,23 @@
   margin: 0 auto;
   display: flex;
 }
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-image: linear-gradient(
+    to right bottom,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  height: 100vh;
+  z-index: 2;
+}
 main {
+  margin-top: 500px;
   position: relative;
 }
 .questions {
@@ -25,6 +43,13 @@ main {
   margin: 0 auto;
   width: 50%;
   padding: 20px 0;
+}
+.tv {
+  position: absolute;
+  top: -75px;
+  bottom: -20px;
+  left: -75px;
+  right: -280px;
 }
 .mario {
   transition: left 1s linear;
@@ -59,6 +84,27 @@ main {
   width: 50%;
   text-align: center;
   margin: 0 auto;
+}
+.secondarySection {
+  margin-top: 130px;
+}
+.background:before {
+  content: "";
+  color: black;
+  background: black;
+  width: 100%;
+  position: absolute;
+  height: 100px;
+  bottom: -100px;
+}
+.pseudoTv:before {
+  content: "";
+  color: black;
+  background: black;
+  width: 100%;
+  position: absolute;
+  height: 60px;
+  top: -50px;
 }
 @keyframes spin {
   from {
