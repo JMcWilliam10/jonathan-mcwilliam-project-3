@@ -3,14 +3,12 @@
 }
 
 .levelBackground {
-  // width: 700px;
   width: 100vw;
   margin: 0 auto;
   background: url(./../../assets/images/mario-1-1.gif) no-repeat 0 0;
   background-size: cover;
-  background-position: 2% 0;
+  background-position: 100% 0;
   transition: 3s ease;
-  filter: brightness(1);
 }
 .background {
   width: 700px;
@@ -27,8 +25,7 @@
     #051937,
     #004d7a,
     #008793,
-    #00bf72,
-    #a8eb12
+    #00bf72
   );
   height: 100vh;
   z-index: 2;
@@ -57,7 +54,7 @@ main {
   bottom: 10%;
   left: 100px;
   align-self: center;
-  animation: reverseSpin 1s;
+  animation: reverseSpin 3s;
 }
 .target {
   width: 50px;
@@ -126,7 +123,7 @@ main {
 }
 @keyframes reverseSpin {
   from {
-    transform: rotate(360deg);
+    transform: rotate(1260deg);
   }
   to {
     transform: rotate(0deg);

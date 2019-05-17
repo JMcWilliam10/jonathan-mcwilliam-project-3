@@ -251,11 +251,9 @@ select,
   margin: 0 auto;
   background: url(./../../assets/images/mario-1-1.gif) no-repeat 0 0;
   background-size: cover;
-  background-position: 2% 0;
+  background-position: 100% 0;
   -webkit-transition: 3s ease;
   transition: 3s ease;
-  -webkit-filter: brightness(1);
-          filter: brightness(1);
 }
 
 .background {
@@ -277,8 +275,8 @@ select,
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#051937), color-stop(#004d7a), color-stop(#008793), color-stop(#00bf72), to(#a8eb12));
-  background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#051937), color-stop(#004d7a), color-stop(#008793), to(#00bf72));
+  background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72);
   height: 100vh;
   z-index: 2;
 }
@@ -313,8 +311,8 @@ main {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -webkit-animation: reverseSpin 1s;
-          animation: reverseSpin 1s;
+  -webkit-animation: reverseSpin 3s;
+          animation: reverseSpin 3s;
 }
 
 .target {
@@ -408,8 +406,8 @@ main {
 
 @-webkit-keyframes reverseSpin {
   from {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(1260deg);
+            transform: rotate(1260deg);
   }
   to {
     -webkit-transform: rotate(0deg);
@@ -419,8 +417,8 @@ main {
 
 @keyframes reverseSpin {
   from {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(1260deg);
+            transform: rotate(1260deg);
   }
   to {
     -webkit-transform: rotate(0deg);
