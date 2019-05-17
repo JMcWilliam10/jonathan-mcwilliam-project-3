@@ -18,6 +18,11 @@
       </div>
       <div class="border">
         <main class="background">
+          <button
+            aria-label="playMusic"
+            onclick="app.brightness()"
+            class="tvButton"
+          ></button>
           <div class="levelBackground pseudoTv">
             <div class="tv">
               <img src="./assets/images/80s-tv.png" alt="" />
@@ -78,31 +83,6 @@
         </div>
         <input type="submit" value="submit" />
       </form>
-      <!-- <div class="nes">
-      <img src="./assets/images/Nes_controller.svg" alt="" />
-    </div> -->
-
-      <!-- The core Firebase JS SDK is always required and must be listed first -->
-      <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
-
-      <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
-
-      <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-          apiKey: "AIzaSyAqu1APOFV5cF35hwj5Pal6FJbHuO0siFA",
-          authDomain: "firstdatabase-d2990.firebaseapp.com",
-          databaseURL: "https://firstdatabase-d2990.firebaseio.com",
-          projectId: "firstdatabase-d2990",
-          storageBucket: "firstdatabase-d2990.appspot.com",
-          messagingSenderId: "955839676466",
-          appId: "1:955839676466:web:14ca03aa4894b1dd"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const dbRef = firebase.database().ref();
-      </script>
       <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

@@ -10,8 +10,7 @@
   background-size: cover;
   background-position: 2% 0;
   transition: 3s ease;
-  // border: 10px solid black;
-  filter: brightness(1.45);
+  filter: brightness(1);
 }
 .background {
   width: 700px;
@@ -84,6 +83,17 @@ main {
   width: 50%;
   text-align: center;
   margin: 0 auto;
+}
+.tvButton {
+  background: rgba(0, 0, 0, 0);
+  width: 6%;
+  position: absolute;
+  height: 9%;
+  bottom: 184px;
+  right: -115px;
+  border-radius: 6px;
+  z-index: 10;
+  border: none;
 }
 .secondarySection {
   margin-top: 130px;
