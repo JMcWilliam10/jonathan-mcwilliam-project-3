@@ -253,6 +253,36 @@ select,
 
 .buttonSpacing {
   margin-bottom: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.channelButton {
+  background: rgba(0, 0, 0, 0);
+  width: 10%;
+  position: absolute;
+  height: 15%;
+  bottom: 154px;
+  right: -205px;
+  border-radius: 100px;
+  z-index: 10;
+  border: none;
+}
+
+.channelButton2 {
+  background: rgba(0, 0, 0, 0);
+  width: 14%;
+  position: absolute;
+  height: 20%;
+  bottom: 1%;
+  right: -33%;
+  border-radius: 100px;
+  z-index: 10;
+  border: 1px solid red;
 }
 
 article,
@@ -592,18 +622,6 @@ form {
   border: none;
 }
 
-.channelButton {
-  background: rgba(0, 0, 0, 0);
-  width: 10%;
-  position: absolute;
-  height: 15%;
-  bottom: 154px;
-  right: -205px;
-  border-radius: 100px;
-  z-index: 10;
-  border: none;
-}
-
 .background:before {
   content: "";
   color: black;
@@ -622,6 +640,42 @@ form {
   position: absolute;
   height: 60px;
   top: -50px;
+}
+
+.kawhi {
+  height: 100%;
+  display: none;
+  position: relative;
+}
+
+.kawhi img:first-of-type {
+  height: 100%;
+  position: absolute;
+}
+
+.hotcopsTitle {
+  position: absolute;
+  bottom: 40%;
+}
+
+.hotCops {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.hotCopsFull {
+  height: 100%;
+}
+
+.hotCops {
+  height: 100%;
 }
 
 @-webkit-keyframes spin {

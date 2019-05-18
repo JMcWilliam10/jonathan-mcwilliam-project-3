@@ -20,4 +20,28 @@ select,
 }
 .buttonSpacing {
   margin-bottom: 2px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.channelButton {
+  background: rgba(0, 0, 0, 0);
+  width: 10%;
+  position: absolute;
+  height: 15%;
+  bottom: 154px;
+  right: -205px;
+  border-radius: 100px;
+  z-index: 10;
+  border: none;
+}
+.channelButton2 {
+  background: rgba(0, 0, 0, 0);
+  width: 14%;
+  position: absolute;
+  height: 20%;
+  bottom: 1%;
+  right: -33%;
+  border-radius: 100px;
+  z-index: 10;
+  border: 1px solid red;
 }

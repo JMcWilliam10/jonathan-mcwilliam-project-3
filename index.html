@@ -24,23 +24,46 @@
             class="tvButton"
           ></button>
           <button
-            aria-label="adjustBrightness"
-            onclick="app.brightness()"
+            aria-label="play winning shot by the raptors"
+            onclick="app.kawhi()"
             class="channelButton"
           ></button>
+          <button
+            aria-label="play hot cops"
+            onclick="app.hotCops()"
+            class="channelButton2"
+          ></button>
           <div class="levelBackground pseudoTv">
+            <div class="kawhi">
+              <img
+                src="./assets/images/kawhigif.gif"
+                alt="kawhi scoring a game winning shot"
+              />
+            </div>
+            <div class="hotCops hide">
+              <img
+                class="hotcopsTitle"
+                src="./assets/images/hotcops.png"
+                alt=""
+              />
+              <img
+                class="hotCopsFull"
+                src="./assets/images/hotcopsgif.gif"
+                alt=""
+              />
+            </div>
+
             <div class="tv">
               <img src="./assets/images/80s-tv.png" alt="" />
             </div>
-
             <div class="coin">
               <img src="./assets/images/coin.gif" alt="" />
             </div>
             <div class="target">
-              <img src="./assets/images/target.png" alt="target icon" />
+              <img src="./assets/images/target.png" alt="" />
             </div>
             <div class="mario">
-              <img src="./assets/images/mario.png" alt="mario icon" />
+              <img src="./assets/images/mario.png" alt="" />
             </div>
           </div>
           <div class="score">
@@ -49,7 +72,8 @@
           <form action="">
             <div class="secondarySection">
               <p class="questions">
-                Using flexbox properties how would you align mario to the target
+                Assuming mario is 'position: absolute' relative to the screen.
+                Place mario to the target
               </p>
             </div>
             <div class="buttonSpacing">
