@@ -1,5 +1,5 @@
 let score = 0;
-let lives = 5;
+let lives = 10;
 const app = {};
 const $form = $("form"),
   $scoreValue = $(".scoreValue"),
@@ -7,6 +7,7 @@ const $form = $("form"),
   $levelBackground = $(".levelBackground"),
   $target = $(".target"),
   $coin = $(".coin"),
+  $lives = ".lives",
   $life = $(".life"),
   $subQuestion1 = $(".subQuestion1"),
   $subQuestion2 = $(".subQuestion2"),

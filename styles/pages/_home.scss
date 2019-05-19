@@ -176,7 +176,7 @@ input::-moz-focus-inner {
 }
 
 .title {
-  margin: 5% 10%;
+  margin: 2% 10% 7%;
 }
 
 .levelBackground {
@@ -215,7 +215,14 @@ input::-moz-focus-inner {
   right: 0;
   background: rgba(0, 0, 0, -0.12);
 }
-
+.gameboy {
+  display: none;
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+}
 main {
   position: relative;
 }
@@ -328,6 +335,8 @@ form {
 .hotcopsTitle {
   position: absolute;
   bottom: 40%;
+  width: 80%;
+  margin-left: 10%;
 }
 .hotCops {
   display: none;
@@ -411,7 +420,8 @@ form {
   }
 }
 @media (max-width: 560px) {
-  .lives {
+  .lives,
+  h2 {
     font-size: 1rem;
   }
   form {
@@ -445,13 +455,26 @@ form {
     width: 315px;
     height: 225px;
   }
-  button:last-of-type {
-    margin-top: 100px;
-  }
 }
 @media (max-width: 315px) {
   .background {
     width: 280px;
     height: 200px;
+  }
+}
+@media (max-width: 280px) {
+  .background {
+    width: 160px;
+    height: 144px;
+  }
+  .gameboy {
+    display: block;
+  }
+  form {
+    top: 325px;
+    background: none;
+  }
+  .questions {
+    width: 100%;
   }
 }
