@@ -176,7 +176,7 @@ input::-moz-focus-inner {
 }
 
 .title {
-  height: 20%;
+  margin: 5% 10%;
 }
 
 .levelBackground {
@@ -268,7 +268,7 @@ main {
 .lives {
   position: absolute;
   top: 4%;
-  left: 11%;
+  left: 5%;
   font-size: 2rem;
 }
 .nes {
@@ -361,14 +361,97 @@ form {
     transform: rotate(0deg);
   }
 }
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
+  .pseudoTv:before,
+  .background:before {
+    display: none;
+  }
+  form {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 600px;
+    width: 100%;
+    padding-top: 0;
+    height: 10%;
+  }
+  button {
+    display: none;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+  }
   .background {
-    width: 350px;
-    height: 250px;
-    margin: 0 20vw;
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
     display: flex;
+  }
+  .flex {
+    background: black;
   }
   .tv {
     display: none;
+  }
+}
+@media (max-width: 700px) {
+  form {
+    top: 500px;
+  }
+  .background {
+    width: 630px;
+    height: 450px;
+  }
+}
+@media (max-width: 630px) {
+  .background {
+    width: 560px;
+    height: 400px;
+  }
+}
+@media (max-width: 560px) {
+  .lives {
+    font-size: 1rem;
+  }
+  form {
+    top: 440px;
+  }
+  .background {
+    width: 490px;
+    height: 350px;
+  }
+}
+@media (max-width: 490px) {
+  .background {
+    width: 420px;
+    height: 300px;
+  }
+}
+@media (max-width: 420px) {
+  form {
+    top: 360px;
+  }
+  .background {
+    width: 350px;
+    height: 250px;
+  }
+}
+@media (max-width: 350px) {
+  form {
+    top: 330px;
+  }
+  .background {
+    width: 315px;
+    height: 225px;
+  }
+  button:last-of-type {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 315px) {
+  .background {
+    width: 280px;
+    height: 200px;
   }
 }

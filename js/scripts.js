@@ -342,6 +342,7 @@ app.level13 = () => {
       app.incrementor();
       app.level14();
     } else {
+      app.incorrect();
       app.level14();
     }
     $scoreValue.html(score);
@@ -368,6 +369,7 @@ app.level14 = () => {
       app.incrementor();
       app.level15();
     } else {
+      app.incorrect();
       app.level15();
     }
     $scoreValue.html(score);
@@ -394,6 +396,7 @@ app.level15 = () => {
       app.incrementor();
       // app.level16();
     } else {
+      app.incorrect();
       // app.level16();
     }
     $scoreValue.html(score);
