@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>HackerYou App</title>
+    <title>Super Position Mario</title>
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
@@ -19,24 +20,25 @@
       <div class="border">
         <main class="background">
           <button
-            aria-label="adjustBrightness"
-            onclick="app.brightness()"
+            aria-label="Play theme song."
+            onclick="app.theme()"
+            ondblclick="app.themeStop()"
             class="tvButton"
           ></button>
           <button
-            aria-label="play winning shot by the raptors"
+            aria-label="Show video of toronto raptors's last winning shot."
             onclick="app.kawhi()"
             class="channelButton"
           ></button>
           <button
-            aria-label="play hot cops"
+            aria-label="Play hot cops commercial."
             onclick="app.hotCops()"
             class="channelButton2"
           ></button>
           <div class="levelBackground pseudoTv">
             <div class="kawhi">
               <img
-                src="./assets/images/kawhigif.gif"
+                src="./assets/images/kawhi9s.gif"
                 alt="kawhi scoring a game winning shot"
               />
             </div>
@@ -68,6 +70,10 @@
           </div>
           <div class="score">
             <h2 class="scoreValue"></h2>
+          </div>
+          <h2 class="lives"><span class="life"></span> <span>: Lives</span></h2>
+          <div class="overlay">
+            <img src="./assets/images/clear.png" alt="" />
           </div>
           <form action="">
             <div class="secondarySection">
@@ -110,7 +116,9 @@
           </form>
         </main>
       </div>
-
+      <audio id="coin" src="./assets/audio/coin.wav"></audio>
+      <audio id="wrong" src="./assets/audio/wrong.wav"></audio>
+      <audio id="theme" src="./assets/audio/theme.mp3"></audio>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
       <script src="./js/scripts.js"></script>
     </div>

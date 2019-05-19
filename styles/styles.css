@@ -239,7 +239,7 @@ select,
   font-size: 15px;
   height: 30px;
   padding: 5px;
-  width: 60px;
+  width: 80px;
   margin: 10px;
   border-radius: 5px;
   border: 1px solid white;
@@ -261,28 +261,23 @@ select,
           justify-content: space-evenly;
 }
 
-.channelButton {
-  background: rgba(0, 0, 0, 0);
-  width: 10%;
-  position: absolute;
-  height: 15%;
-  bottom: 154px;
-  right: -205px;
-  border-radius: 100px;
-  z-index: 10;
-  border: none;
-}
-
+.channelButton,
 .channelButton2 {
   background: rgba(0, 0, 0, 0);
   width: 14%;
   position: absolute;
   height: 20%;
-  bottom: 1%;
   right: -33%;
   border-radius: 100px;
   z-index: 10;
-  border: 1px solid red;
+}
+
+.channelButton {
+  bottom: 26%;
+}
+
+.channelButton2 {
+  bottom: 1%;
 }
 
 article,
@@ -533,6 +528,15 @@ input::-moz-focus-inner {
   height: 100vh;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+}
+
 main {
   position: relative;
 }
@@ -553,6 +557,7 @@ main {
   bottom: -20px;
   left: -75px;
   right: -280px;
+  z-index: 2;
 }
 
 .mario {
@@ -594,6 +599,13 @@ main {
   font-size: 2rem;
 }
 
+.lives {
+  position: absolute;
+  top: 4%;
+  left: 11%;
+  font-size: 2rem;
+}
+
 .nes {
   width: 50%;
   text-align: center;
@@ -608,6 +620,7 @@ form {
   width: 26%;
   color: white;
   background: rgba(0, 0, 0, 0.281);
+  z-index: 3;
 }
 
 .tvButton {
@@ -719,6 +732,20 @@ form {
   to {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .background {
+    width: 350px;
+    height: 250px;
+    margin: 0 20vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .tv {
+    display: none;
   }
 }
 

@@ -207,6 +207,15 @@ input::-moz-focus-inner {
   z-index: 2;
   height: 100vh;
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, -0.12);
+}
+
 main {
   position: relative;
 }
@@ -225,6 +234,7 @@ main {
   bottom: -20px;
   left: -75px;
   right: -280px;
+  z-index: 2;
 }
 .mario {
   transition: left 1s linear;
@@ -255,6 +265,12 @@ main {
   right: 11%;
   font-size: 2rem;
 }
+.lives {
+  position: absolute;
+  top: 4%;
+  left: 11%;
+  font-size: 2rem;
+}
 .nes {
   width: 50%;
   text-align: center;
@@ -268,6 +284,7 @@ form {
   width: 26%;
   color: white;
   background: rgba(0, 0, 0, 0.281);
+  z-index: 3;
 }
 .tvButton {
   background: rgba(0, 0, 0, 0);
@@ -344,14 +361,14 @@ form {
     transform: rotate(0deg);
   }
 }
-// @media screen and(max-width: 800px) {
-//   .background {
-//     width: 350px;
-//     height: 250px;
-//     margin: 0 20vw;
-//     display: flex;
-//   }
-//   .tv {
-//     display: none;
-//   }
-// }
+@media screen and (max-width: 800px) {
+  .background {
+    width: 350px;
+    height: 250px;
+    margin: 0 20vw;
+    display: flex;
+  }
+  .tv {
+    display: none;
+  }
+}

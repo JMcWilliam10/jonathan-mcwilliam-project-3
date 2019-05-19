@@ -1,4 +1,5 @@
 let score = 0;
+let lives = 5;
 const app = {};
 const $form = $("form"),
   $scoreValue = $(".scoreValue"),
@@ -6,6 +7,7 @@ const $form = $("form"),
   $levelBackground = $(".levelBackground"),
   $target = $(".target"),
   $coin = $(".coin"),
+  $life = $(".life"),
   $subQuestion1 = $(".subQuestion1"),
   $subQuestion2 = $(".subQuestion2"),
   $subQuestion1Option1 = $(".subQuestion1Option1"),
@@ -21,6 +23,7 @@ const $form = $("form"),
   $hotCops = $(".hotCops");
 
 app.setLevel1 = () => {
+  $life.text(lives);
   $subQuestion1.text("top: ");
   $subQuestion2.text("right: ");
   $subQuestion1Option1.val("12%").html("12%");
@@ -42,6 +45,7 @@ app.level2 = () => {
       app.incrementor();
       app.level3();
     } else {
+      app.incorrect();
       app.level3();
     }
     $scoreValue.html(score);
@@ -69,6 +73,7 @@ app.level3 = () => {
       app.incrementor();
       app.level4();
     } else {
+      app.incorrect();
       app.level4();
     }
     $mario.css({ left: "9%", bottom: "23.5%" });
@@ -95,6 +100,7 @@ app.level4 = () => {
       app.incrementor();
       app.level5();
     } else {
+      app.incorrect();
       app.level5();
     }
     $mario.css({ left: "5%", bottom: "31%" });
@@ -120,6 +126,7 @@ app.level5 = () => {
       app.incrementor();
       app.level6();
     } else {
+      app.incorrect();
       app.level6();
     }
     $scoreValue.html(score);
@@ -146,6 +153,7 @@ app.level6 = () => {
       app.incrementor();
       app.level7();
     } else {
+      app.incorrect();
       app.level7();
     }
     $scoreValue.html(score);
@@ -172,6 +180,7 @@ app.level7 = () => {
       app.incrementor();
       app.level8();
     } else {
+      app.incorrect();
       app.level8();
     }
     $scoreValue.html(score);
@@ -198,6 +207,7 @@ app.level8 = () => {
       app.incrementor();
       app.level9();
     } else {
+      app.incorrect();
       app.level9();
     }
     $scoreValue.html(score);
@@ -224,6 +234,7 @@ app.level9 = () => {
       app.incrementor();
       app.level10();
     } else {
+      app.incorrect();
       app.level10();
     }
     $scoreValue.html(score);
@@ -250,6 +261,7 @@ app.level10 = () => {
       app.incrementor();
       app.level11();
     } else {
+      app.incorrect();
       app.level11();
     }
     $scoreValue.html(score);
@@ -276,6 +288,7 @@ app.level11 = () => {
       app.incrementor();
       app.level12();
     } else {
+      app.incorrect();
       app.level12();
     }
     $scoreValue.html(score);
@@ -302,6 +315,7 @@ app.level12 = () => {
       app.incrementor();
       app.level13();
     } else {
+      app.incorrect();
       app.level13();
     }
     $scoreValue.html(score);
@@ -376,7 +390,7 @@ app.level15 = () => {
   $form.on("submit", function(e) {
     e.preventDefault();
     $form.unbind("submit");
-    if ($userInput1.val() === "17" && $userInput2.val() === "42") {
+    if ($userInput1.val() === "17%" && $userInput2.val() === "42%") {
       app.incrementor();
       // app.level16();
     } else {
@@ -386,52 +400,82 @@ app.level15 = () => {
     $levelBackground.css("background-position", "95.3% 0");
     $mario.css({ left: "6%", bottom: "38%" });
     $target.css({ right: "17%", bottom: "72%" });
-    $subQuestion1.text("top: ");
-    $subQuestion2.text("left: ");
-    $subQuestion1Option1.val("30%").html("30%");
-    $subQuestion1Option2.val("40%").html("40%");
-    $subQuestion1Option3.val("50%").html("50%");
-    $subQuestion1Option4.val("60%").html("60%");
-    $subQuestion2Option1.val("30%").html("30%");
-    $subQuestion2Option2.val("40%").html("40%");
-    $subQuestion2Option3.val("50%").html("50%");
-    $subQuestion2Option4.val("60%").html("60%");
+    $subQuestion1.text("bottom: ");
+    $subQuestion2.text("right: ");
+    $subQuestion1Option1.val("72%").html("72%");
+    $subQuestion1Option2.val("52%").html("52%");
+    $subQuestion1Option3.val("32%").html("32%");
+    $subQuestion1Option4.val("12%").html("12%");
+    $subQuestion2Option1.val("17%").html("17%");
+    $subQuestion2Option2.val("37%").html("37%");
+    $subQuestion2Option3.val("57%").html("57%");
+    $subQuestion2Option4.val("77%").html("77%");
   });
 };
 
 app.incrementor = () => {
-  score = score + 1;
+  score++;
   $scoreValue.html(score);
+  coin.play();
 };
-app.brightness = () => {
-  $(".background").css("filter", " brightness(1.25)");
+app.incorrect = () => {
+  lives--;
+  $scoreValue.html(score);
+  wrong.play();
+  if (lives > 0) {
+    $life.text(lives);
+  } else {
+    $("lives").text(`Last Life...`);
+    if (lives === 0) {
+      $("mario").css("scale", "5");
+      alert("you're out of lives! try again!");
+      setTimeout(function() {
+        location.reload();
+      }, 1);
+    }
+  }
+};
+// app.brightness = () => {
+//   $(".background").css("filter", " brightness(1.25)");
+// };
+app.theme = () => {
+  theme.play();
+};
+app.themeStop = () => {
+  theme.pause();
 };
 app.kawhi = () => {
   $(".kawhi").css("display", "block");
-  $mario.css("display", "none"),
-    $target.css("display", "none"),
-    $coin.css("display", "none");
+  $mario.css("display", "none");
+  $target.css("display", "none");
+  $coin.css("display", "none");
+  $scoreValue.css("display", "none");
+  setTimeout(() => {
+    $(".kawhi").css("display", "none");
+    $mario.css("display", "block");
+    $target.css("display", "block");
+    $coin.css("display", "block");
+    $scoreValue.css("display", "block");
+  }, 9000);
 };
 
 app.hotCops = () => {
-  $(".hotCops").toggle(
-    function() {
-      $(".hotCops").css("display", "block");
-      $mario.css("display", "none");
-      $target.css("display", "none");
-      $coin.css("display", "none");
-      $scoreValue.css("display", "none");
-    },
-    setTimeout(function() {
-      $(".hotCops").css("display", "none");
-      $mario.css("display", "block");
-      $target.css("display", "block");
-      $coin.css("display", "block");
-    }, 12000)
-  );
+  $(".hotCops").css("display", "block");
+  $mario.css("display", "none");
+  $target.css("display", "none");
+  $coin.css("display", "none");
+  $scoreValue.css("display", "none");
+  setTimeout(function() {
+    $(".hotCops").css("display", "none");
+    $mario.css("display", "block");
+    $target.css("display", "block");
+    $coin.css("display", "block");
+  }, 12000);
 };
 
 $(document).ready(function() {
   setTimeout($levelBackground.css("background-position", "2% 0"), 1);
   app.setLevel1();
+  let something = 1;
+  // setInterval(() => console.log((something += 1)), 1000);
 });
