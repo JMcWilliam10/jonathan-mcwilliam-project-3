@@ -370,10 +370,33 @@ form {
     transform: rotate(0deg);
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
+  .flex {
+    background: black;
+  }
+  .background {
+    margin: 0 12vw;
+  }
+}
+@media (max-width: 1100px) {
+  .background {
+    margin: 0 7vw;
+  }
+}
+@media (max-width: 1060px) {
+  button {
+    display: none;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+  }
   .pseudoTv:before,
   .background:before {
     display: none;
+  }
+  .flex {
+    background: black;
   }
   form {
     bottom: 0;
@@ -384,22 +407,21 @@ form {
     padding-top: 0;
     height: 10%;
   }
-  button {
+  .background {
+    margin: 0 auto;
+  }
+  .tv {
     display: none;
   }
-  * {
-    padding: 0;
-    margin: 0;
-  }
+}
+@media (max-width: 800px) {
   .background {
     width: 700px;
     height: 500px;
     margin: 0 auto;
     display: flex;
   }
-  .flex {
-    background: black;
-  }
+
   .tv {
     display: none;
   }

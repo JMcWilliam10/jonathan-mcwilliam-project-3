@@ -7,7 +7,7 @@ const $form = $("form"),
   $levelBackground = $(".levelBackground"),
   $target = $(".target"),
   $coin = $(".coin"),
-  $lives = ".lives",
+  $lives = $(".lives"),
   $life = $(".life"),
   $subQuestion1 = $(".subQuestion1"),
   $subQuestion2 = $(".subQuestion2"),
@@ -454,12 +454,14 @@ app.kawhi = () => {
   $target.css("display", "none");
   $coin.css("display", "none");
   $scoreValue.css("display", "none");
+  $lives.css("display", "none");
   setTimeout(() => {
     $(".kawhi").css("display", "none");
     $mario.css("display", "block");
     $target.css("display", "block");
     $coin.css("display", "block");
     $scoreValue.css("display", "block");
+    $lives.css("display", "block");
   }, 9000);
 };
 
@@ -469,11 +471,13 @@ app.hotCops = () => {
   $target.css("display", "none");
   $coin.css("display", "none");
   $scoreValue.css("display", "none");
+  $lives.css("display", "none");
   setTimeout(function() {
     $(".hotCops").css("display", "none");
     $mario.css("display", "block");
     $target.css("display", "block");
     $coin.css("display", "block");
+    $lives.css("display", "block");
   }, 12000);
 };
 
