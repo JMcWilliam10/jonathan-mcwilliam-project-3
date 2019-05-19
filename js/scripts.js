@@ -478,7 +478,7 @@ app.hotCops = () => {
 };
 
 $(document).ready(function() {
-  setTimeout($levelBackground.css("background-position", "2% 0"), 1);
+  $levelBackground.css("background-position", "2% 0");
   app.setLevel1();
   let something = 1;
   // setInterval(() => console.log((something += 1)), 1000);

@@ -209,6 +209,11 @@ h2 {
   font-size: 1.9rem;
 }
 
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
 form {
   text-align: center;
   display: -webkit-box;
@@ -850,11 +855,16 @@ form {
 
 @media (max-width: 280px) {
   .background {
+    margin-top: 20px;
     width: 160px;
-    height: 144px;
+    height: 114px;
   }
   .gameboy {
     display: block;
+  }
+  body {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
   }
   form {
     top: 325px;
@@ -862,6 +872,24 @@ form {
   }
   .questions {
     width: 100%;
+  }
+}
+
+@media (max-width: 270px) {
+  .background {
+    height: 110px;
+  }
+}
+
+@media (max-width: 260px) {
+  .background {
+    height: 105px;
+  }
+}
+
+@media (max-width: 250px) {
+  .background {
+    height: 100px;
   }
 }
 
