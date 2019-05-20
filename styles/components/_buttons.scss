@@ -3,11 +3,9 @@ select,
   text-align: left;
   background: black;
   color: white;
-  border: none;
   font-size: 15px;
   padding: 5px;
   width: 80px;
-  margin: 10px;
   border-radius: 5px;
   border: 1px solid white;
 }
@@ -31,10 +29,26 @@ select,
   right: -33%;
   border-radius: 100px;
   z-index: 10;
+  border: none;
 }
 .channelButton {
   bottom: 26%;
 }
 .channelButton2 {
   bottom: 1%;
+}
+.tvButton {
+  background: rgba(0, 0, 0, 0);
+  width: 6%;
+  position: absolute;
+  height: 9%;
+  bottom: 184px;
+  right: -115px;
+  border-radius: 6px;
+  z-index: 10;
+  // border: none;
+}
+.colorButton {
+  border: 1px solid white;
+  bottom: 5px;
 }

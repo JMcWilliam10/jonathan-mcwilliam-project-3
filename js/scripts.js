@@ -399,13 +399,12 @@ app.level15 = () => {
     if ($userInput1.val() === "17%" && $userInput2.val() === "42%") {
       app.incrementor();
       alert(
-        `Congratulations! You finished the game, you lost ${lives} lives, finished with ${score} coins and finished in ${time} seconds. Great Work!`
+        `Congratulations! You finished with ${score} coins and finished in ${time} seconds. Great Work!`
       );
     } else {
       app.incorrect();
       alert(
-        `Congratulations! You finished the game, you lost ${20 -
-          lives} lives, finished with ${score} coins and finished in ${time} seconds. Great Work!`
+        `You finished the game! You finished with ${score} coins and finished in ${time} seconds. Great Work!`
       );
     }
     $scoreValue.html(score);
