@@ -1,6 +1,7 @@
 let score = 0;
 let lives = 10;
 const app = {};
+let time = 0;
 const $form = $("form"),
   $scoreValue = $(".scoreValue"),
   $mario = $(".mario"),
@@ -25,6 +26,8 @@ const $form = $("form"),
 
 app.setLevel1 = () => {
   $life.text(lives);
+  setInterval(() => (time += 1), 1000);
+  $levelBackground.css("background-position", "2% 0");
   $subQuestion1.text("top: ");
   $subQuestion2.text("right: ");
   $subQuestion1Option1.val("12%").html("12%");
@@ -395,10 +398,15 @@ app.level15 = () => {
     $form.unbind("submit");
     if ($userInput1.val() === "17%" && $userInput2.val() === "42%") {
       app.incrementor();
-      // app.level16();
+      alert(
+        `Congratulations! You finished the game, you lost ${lives} lives, finished with ${score} coins and finished in ${time} seconds. Great Work!`
+      );
     } else {
       app.incorrect();
-      // app.level16();
+      alert(
+        `Congratulations! You finished the game, you lost ${20 -
+          lives} lives, finished with ${score} coins and finished in ${time} seconds. Great Work!`
+      );
     }
     $scoreValue.html(score);
     $levelBackground.css("background-position", "95.3% 0");
@@ -482,8 +490,5 @@ app.hotCops = () => {
 };
 
 $(document).ready(function() {
-  $levelBackground.css("background-position", "2% 0");
   app.setLevel1();
-  let something = 1;
-  // setInterval(() => console.log((something += 1)), 1000);
 });
