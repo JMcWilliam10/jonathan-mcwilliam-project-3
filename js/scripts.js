@@ -1,7 +1,4 @@
 const app = {};
-let score = 0;
-app.lives = 10;
-let time = 0;
 
 const $form = $("form"),
   $scoreValue = $(".score-value"),
@@ -27,19 +24,23 @@ const $form = $("form"),
   $userInput2 = $(".second-question"),
   $hotCops = $(".hot-cops");
 
-app.setLevel1 = () => {
+app.score = 0;
+
+app.level1 = () => {
+  app.lives = 10;
+  app.time = 0;
   $life.text(app.lives);
-  setInterval(() => (time += 1), 1000);
+  setInterval(() => (app.time += 1), 1000);
   $mario.css({ left: "14%", bottom: "10%" });
   $levelBackground.css("background-position", "2% 0");
   $target.css({ right: "1%", bottom: "48%" });
+  $levelBackground.css("background-position", "2% 0");
   $labelQuestion1.html(
     "The position of the target on the y-axis is 104 out of 200."
   );
   $labelQuestion2.html(
     "The position of the target on the x-axis is 198 out of 200."
   );
-  $levelBackground.css("background-position", "2% 0");
   $subQuestion1.text("top: ");
   $subQuestion2.text("right: ");
   $subQuestion1Option1.val("12%").html("12%");
@@ -64,16 +65,16 @@ app.level2 = () => {
       app.incorrect();
       app.level3();
     }
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     $mario.css({ left: "17%", bottom: "38.5%" });
+    $levelBackground.css("background-position", "10% 0");
+    $target.css({ right: `46%`, bottom: "26%" });
     $labelQuestion1.html(
       "The position of the target on the y-axis is 52 out of 200."
     );
     $labelQuestion2.html(
       "The position of the target on the x-axis is 92 out of 200."
     );
-    $levelBackground.css("background-position", "10% 0");
-    $target.css({ right: `46%`, bottom: "26%" });
     $subQuestion1.text("bottom: ");
     $subQuestion2.text("right: ");
     $subQuestion1Option1.val("86%").html("86%");
@@ -90,7 +91,7 @@ app.level3 = () => {
   $form.on("submit", function(e) {
     e.preventDefault();
     $form.unbind("submit");
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     if ($userInput1.val() === "26%" && $userInput2.val() === "46%") {
       app.incrementor();
       app.level4();
@@ -101,6 +102,12 @@ app.level3 = () => {
     $mario.css({ left: "9%", bottom: "23.5%" });
     $levelBackground.css("background-position", "14% 0");
     $target.css({ right: "34.5%", bottom: "34%" });
+    $labelQuestion1.html(
+      "The position of the target on the y-axis is 52 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the x-axis is 92 out of 200."
+    );
     $subQuestion1.text("right: ");
     $subQuestion2.text("bottom: ");
     $subQuestion1Option1.val("14.5%").html("14.5%");
@@ -117,7 +124,7 @@ app.level4 = () => {
   $form.on("submit", function(e) {
     e.preventDefault();
     $form.unbind("submit");
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     if ($userInput1.val() === "34.5%" && $userInput2.val() === "34%") {
       app.incrementor();
       app.level5();
@@ -151,7 +158,7 @@ app.level5 = () => {
       app.incorrect();
       app.level6();
     }
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     $mario.css({ left: "5%", bottom: "38%" });
     $levelBackground.css("background-position", "23.7% 0");
     $target.css({ right: `32.5%`, bottom: "41%" });
@@ -178,7 +185,7 @@ app.level6 = () => {
       app.incorrect();
       app.level7();
     }
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     $levelBackground.css("background-position", "29.5% 0");
     $mario.css({ left: "5%", bottom: "38%" });
     $target.css({ right: `5%`, bottom: "15%" });
@@ -205,7 +212,7 @@ app.level7 = () => {
       app.incorrect();
       app.level8();
     }
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     $levelBackground.css("background-position", "37.5% 0");
     $mario.css({ left: "8%", bottom: "10%" });
     $target.css({ right: "19%", bottom: "68%" });
@@ -232,7 +239,7 @@ app.level8 = () => {
       app.incorrect();
       app.level9();
     }
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     $levelBackground.css("background-position", "44.5% 0");
     $mario.css({ left: "7%", bottom: "67%" });
     $target.css({ right: `14%`, bottom: "40%" });
@@ -259,7 +266,7 @@ app.level9 = () => {
       app.incorrect();
       app.level10();
     }
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     $levelBackground.css("background-position", "52% 0");
     $mario.css({ left: "7%", bottom: "38%" });
     $target.css({ right: `1%`, bottom: "40%" });
@@ -286,7 +293,7 @@ app.level10 = () => {
       app.incorrect();
       app.level11();
     }
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     $levelBackground.css("background-position", "60.8% 0");
     $mario.css({ left: "7%", bottom: "38%" });
     $target.css({ right: `21%`, bottom: "70%" });
@@ -313,7 +320,7 @@ app.level11 = () => {
       app.incorrect();
       app.level12();
     }
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     $levelBackground.css("background-position", "67.6% 0");
     $mario.css({ left: "7%", bottom: "67%" });
     $target.css({ right: `42%`, bottom: "41%" });
@@ -340,7 +347,7 @@ app.level12 = () => {
       app.incorrect();
       app.level13();
     }
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     $levelBackground.css("background-position", "72.4% 0");
     $mario.css({ left: "6%", bottom: "38.5%" });
     $target.css({ right: "12%", bottom: "41%" });
@@ -367,7 +374,7 @@ app.level13 = () => {
       app.incorrect();
       app.level14();
     }
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     $levelBackground.css("background-position", "80.2% 0");
     $mario.css({ left: "6%", bottom: "38.5%" });
     $target.css({ right: "12%", bottom: "17%" });
@@ -394,7 +401,7 @@ app.level14 = () => {
       app.incorrect();
       app.level15();
     }
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     $levelBackground.css("background-position", "88% 0");
     $mario.css({ left: "6%", bottom: "10%" });
     $target.css({ right: "17%", bottom: "42%" });
@@ -417,15 +424,19 @@ app.level15 = () => {
     if ($userInput1.val() === "17%" && $userInput2.val() === "42%") {
       app.incrementor();
       alert(
-        `Congratulations! You finished with ${score} coins and finished in ${time} seconds. Great Work!`
+        `Congratulations! You finished with ${
+          app.score
+        } coins and finished in ${app.time} seconds overall. Great Work!`
       );
     } else {
       app.incorrect();
       alert(
-        `You finished the game! You finished with ${score} coins and finished in ${time} seconds. Great Work!`
+        `You finished the game! You finished with ${
+          app.score
+        } coins and finished in ${app.time} seconds overall. Great Work!`
       );
     }
-    $scoreValue.html(score);
+    $scoreValue.html(app.score);
     $levelBackground.css("background-position", "95.3% 0");
     $mario.css({ left: "6%", bottom: "38%" });
     $target.css({ right: "17%", bottom: "72%" });
@@ -439,26 +450,31 @@ app.level15 = () => {
     $subQuestion2Option2.val("37%").html("37%");
     $subQuestion2Option3.val("57%").html("57%");
     $subQuestion2Option4.val("77%").html("77%");
+    $(".submit").text("Play Again!");
   });
 };
 
 app.incrementor = () => {
-  score++;
-  $scoreValue.html(score);
+  app.score++;
+  $scoreValue.html(app.score);
   coin.play();
 };
 app.incorrect = () => {
   app.lives--;
-  $scoreValue.html(score);
+  $scoreValue.html(app.score);
   wrong.play();
   if (app.lives > 0) {
     $life.text(app.lives);
   } else if (app.lives === 0) {
     alert(
-      "Even though you had more lives than a cat 🐈, you still ran ️🏃 out of them all! Try again! 😊"
+      "Even though you had more lives than a cat 🐈, you still ran ️🏃 out of them all! Next time you'll have a new occasionally levitating friend 🦖 to help you out! Try again! 😊"
     );
+    $(".mario img").attr("src", "./assets/images/yoshi.png");
+
+    $mario.css("width", "20%");
     setTimeout(function() {
-      app.setLevel1();
+      app.score = 0;
+      app.level1();
     }, 1);
   }
 };
@@ -505,7 +521,7 @@ app.hotCops = () => {
 };
 
 app.init = () => {
-  app.setLevel1();
+  app.level1(0);
 };
 
 $(document).ready(function() {

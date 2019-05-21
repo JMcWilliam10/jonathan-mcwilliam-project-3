@@ -1,5 +1,6 @@
-// This is a colour blind filter found from
-//github.com/Altreus/colourblind/blob/master/bookmarklet.js
+// This is a colour blind emulator found from
+// github.com/Altreus/colourblind/blob/master/bookmarklet.js
+// The purpose of implementation is to illustrate what some individuals experience with different forms of colour blindness.
 
 app.color = function() {
   var s = document.getElementById("colourblind-styling");
@@ -59,4 +60,5 @@ app.color = function() {
       "body{-webkit-filter:none;-moz-filter:none;-ms-filter:none;-o-filter:none;filter:none;}";
 };
 
-// The entirety of this code is creditted above.
+// End of code which is not mine
+// The above code is nearly entirely not mine, with only making slight error handling messages and name spacing the function changes which I made

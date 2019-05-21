@@ -6,18 +6,6 @@ body {
   margin: 0 auto;
   max-width: 1600px;
 }
-.title {
-  margin: 2% 10% 7%;
-}
-
-.level-background {
-  width: 700px;
-  margin: 0 auto;
-  background: url(./../assets/images/mario-1-1.gif) no-repeat 0 0;
-  background-size: cover;
-  background-position: 100% 0;
-  transition: 3s ease;
-}
 .background {
   width: 700px;
   height: 500px;
@@ -38,21 +26,16 @@ body {
   z-index: 2;
   height: 100vh;
 }
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, -0.12);
+.title {
+  margin: 2% 10% 7%;
 }
-.gameboy {
-  display: none;
-  position: absolute;
-  top: -10px;
-  bottom: -10px;
-  left: -10px;
-  right: -10px;
+.level-background {
+  width: 700px;
+  margin: 0 auto;
+  background: url(./../assets/images/mario-level.gif) no-repeat 0 0;
+  background-size: cover;
+  background-position: 100% 0;
+  transition: 3s ease;
 }
 main {
   position: relative;
@@ -123,7 +106,6 @@ form {
   background: rgba(0, 0, 0, 0.281);
   z-index: 3;
 }
-
 .background:before {
   content: "";
   color: black;
@@ -164,12 +146,6 @@ form {
 .hot-cops {
   display: none;
 }
-.display {
-  display: block;
-}
-.hide {
-  display: none;
-}
 .hot-cops-full {
   height: 100%;
 }
@@ -180,7 +156,15 @@ form {
   left: 0;
   right: 0;
 }
-
+// Only seen on very small screens
+.gameboy {
+  display: none;
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+}
 @keyframes spin {
   from {
     transform: rotate(0deg);
