@@ -592,7 +592,7 @@ app.hotCops = () => {
 };
 
 app.init = () => {
-  app.level1(0);
+  app.level1();
 };
 
 $(document).ready(function() {
