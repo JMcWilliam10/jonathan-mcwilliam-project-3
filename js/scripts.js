@@ -1,7 +1,8 @@
+const app = {};
 let score = 0;
 let lives = 10;
-const app = {};
 let time = 0;
+
 const $form = $("form"),
   $scoreValue = $(".scoreValue"),
   $mario = $(".mario"),
@@ -12,6 +13,8 @@ const $form = $("form"),
   $life = $(".life"),
   $subQuestion1 = $(".subQuestion1"),
   $subQuestion2 = $(".subQuestion2"),
+  $labelQuestion1 = $(".label-question-1"),
+  $labelQuestion2 = $(".label-question-2"),
   $subQuestion1Option1 = $(".subQuestion1Option1"),
   $subQuestion1Option2 = $(".subQuestion1Option2"),
   $subQuestion1Option3 = $(".subQuestion1Option3"),
@@ -27,6 +30,12 @@ const $form = $("form"),
 app.setLevel1 = () => {
   $life.text(lives);
   setInterval(() => (time += 1), 1000);
+  $labelQuestion1.html(
+    "The position of the target on the y-axis is 104 out of 200."
+  );
+  $labelQuestion2.html(
+    "The position of the target on the x-axis is 198 out of 200."
+  );
   $levelBackground.css("background-position", "2% 0");
   $subQuestion1.text("top: ");
   $subQuestion2.text("right: ");
@@ -54,6 +63,12 @@ app.level2 = () => {
     }
     $scoreValue.html(score);
     $mario.css({ left: "17%", bottom: "38.5%" });
+    $labelQuestion1.html(
+      "The position of the target on the y-axis is 52 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the x-axis is 92 out of 200."
+    );
     $levelBackground.css("background-position", "10% 0");
     $target.css({ right: `46%`, bottom: "26%" });
     $subQuestion1.text("bottom: ");
@@ -446,9 +461,9 @@ app.incorrect = () => {
     }
   }
 };
-// app.brightness = () => {
-//   $(".background").css("filter", " brightness(1.25)");
-// };
+app.brightness = () => {
+  $(".background").css("filter", " brightness(1.25)");
+};
 app.theme = () => {
   theme.play();
 };
@@ -473,14 +488,14 @@ app.kawhi = () => {
 };
 
 app.hotCops = () => {
-  $(".hotCops").css("display", "block");
+  $hotCops.css("display", "block");
   $mario.css("display", "none");
   $target.css("display", "none");
   $coin.css("display", "none");
   $scoreValue.css("display", "none");
   $lives.css("display", "none");
   setTimeout(function() {
-    $(".hotCops").css("display", "none");
+    $hotCops.css("display", "none");
     $mario.css("display", "block");
     $target.css("display", "block");
     $coin.css("display", "block");
@@ -488,6 +503,10 @@ app.hotCops = () => {
   }, 12000);
 };
 
-$(document).ready(function() {
+app.init = () => {
   app.setLevel1();
+};
+
+$(document).ready(function() {
+  app.init();
 });

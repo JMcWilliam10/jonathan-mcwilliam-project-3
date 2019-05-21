@@ -37,7 +37,7 @@ select,
 .channelButton2 {
   bottom: 1%;
 }
-.tvButton {
+.tv-button {
   background: rgba(0, 0, 0, 0);
   width: 6%;
   position: absolute;
@@ -46,9 +46,11 @@ select,
   right: -115px;
   border-radius: 6px;
   z-index: 10;
-  // border: none;
+  border: none;
+}
+.brightness-button {
+  bottom: 50px;
 }
 .colorButton {
-  border: 1px solid white;
   bottom: 5px;
 }

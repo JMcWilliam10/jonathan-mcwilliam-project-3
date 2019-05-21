@@ -1,7 +1,11 @@
 body {
   font-family: "Oswald", sans-serif;
+  background: black;
 }
-
+.wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
+}
 .title {
   margin: 2% 10% 7%;
 }
@@ -20,7 +24,7 @@ body {
   margin: 0 20vw;
   display: flex;
 }
-.flex {
+.main-content {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -191,184 +195,5 @@ form {
   }
   to {
     transform: rotate(0deg);
-  }
-}
-@media (max-width: 1200px) {
-  .flex {
-    background: black;
-  }
-  .background {
-    margin: 0 12vw;
-  }
-}
-@media (max-width: 1450px) {
-  .background {
-    margin: 0 18vw;
-  }
-}
-@media (max-width: 1400px) {
-  .background {
-    margin: 0 16vw;
-  }
-}
-@media (max-width: 1300px) {
-  .background {
-    margin: 0 14vw;
-  }
-}
-@media (max-width: 1300px) {
-  .background {
-    margin: 0 12vw;
-  }
-}
-@media (max-width: 1100px) {
-  .background {
-    margin: 0 7vw;
-  }
-}
-@media (max-width: 1060px) {
-  * {
-    padding: 0;
-    margin: 0;
-  }
-  button {
-    display: none;
-  }
-  .title {
-    margin: 2% 10% 1%;
-  }
-  .pseudoTv:before,
-  .background:before {
-    display: none;
-  }
-  .flex {
-    background: black;
-  }
-  form {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 570px;
-    width: 100%;
-    padding-top: 0;
-    height: 10%;
-  }
-  .background {
-    margin: 0 auto;
-  }
-  .tv {
-    display: none;
-  }
-}
-@media (max-width: 800px) {
-  .background {
-    width: 700px;
-    height: 500px;
-    margin: 0 auto;
-    display: flex;
-  }
-
-  .tv {
-    display: none;
-  }
-}
-@media (max-width: 700px) {
-  form {
-    top: 520px;
-  }
-  .background {
-    width: 630px;
-    height: 450px;
-  }
-}
-@media (max-width: 630px) {
-  .background {
-    width: 560px;
-    height: 400px;
-  }
-}
-@media (max-width: 560px) {
-  .lives,
-  h2 {
-    font-size: 1rem;
-  }
-  form {
-    top: 440px;
-  }
-  .background {
-    width: 490px;
-    height: 350px;
-  }
-}
-@media (max-width: 490px) {
-  .background {
-    width: 420px;
-    height: 300px;
-  }
-}
-@media (max-width: 420px) {
-  form {
-    top: 360px;
-  }
-  .background {
-    width: 350px;
-    height: 250px;
-  }
-}
-@media (max-width: 350px) {
-  form {
-    top: 330px;
-  }
-  .background {
-    width: 315px;
-    height: 225px;
-  }
-}
-@media (max-width: 315px) {
-  .background {
-    width: 280px;
-    height: 200px;
-  }
-}
-@media (max-width: 280px) {
-  .background {
-    margin-top: 20px;
-    width: 160px;
-    height: 114px;
-  }
-  .gameboy {
-    display: block;
-  }
-  body {
-    filter: grayscale(100%);
-  }
-  form {
-    top: 325px;
-    background: none;
-  }
-  .questions {
-    width: 100%;
-  }
-}
-@media (max-width: 270px) {
-  .background {
-    height: 110px;
-  }
-  form {
-    top: 275px;
-    left: -100px;
-  }
-  form div {
-    width: 250px;
-  }
-}
-@media (max-width: 260px) {
-  .background {
-    height: 105px;
-  }
-}
-@media (max-width: 250px) {
-  .background {
-    height: 100px;
   }
 }

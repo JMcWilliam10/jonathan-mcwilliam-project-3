@@ -288,7 +288,7 @@ select,
   bottom: 1%;
 }
 
-.tvButton {
+.tv-button {
   background: rgba(0, 0, 0, 0);
   width: 6%;
   position: absolute;
@@ -297,15 +297,25 @@ select,
   right: -115px;
   border-radius: 6px;
   z-index: 10;
+  border: none;
+}
+
+.brightness-button {
+  bottom: 50px;
 }
 
 .colorButton {
-  border: 1px solid white;
   bottom: 5px;
 }
 
 body {
   font-family: "Oswald", sans-serif;
+  background: black;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
 }
 
 .title {
@@ -331,7 +341,7 @@ body {
   display: flex;
 }
 
-.flex {
+.main-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -561,7 +571,7 @@ form {
 }
 
 @media (max-width: 1200px) {
-  .flex {
+  .fl {
     background: black;
   }
   .background {
@@ -614,7 +624,7 @@ form {
   .background:before {
     display: none;
   }
-  .flex {
+  .main-content {
     background: black;
   }
   form {
@@ -623,8 +633,7 @@ form {
     right: 0;
     top: 570px;
     width: 100%;
-    padding-top: 0;
-    height: 10%;
+    padding-top: 10px;
   }
   .background {
     margin: 0 auto;

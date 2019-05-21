@@ -58,3 +58,5 @@ app.color = function() {
     s.innerHTML =
       "body{-webkit-filter:none;-moz-filter:none;-ms-filter:none;-o-filter:none;filter:none;}";
 };
+
+// The entirety of this code is creditted above.

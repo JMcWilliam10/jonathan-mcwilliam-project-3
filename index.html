@@ -17,113 +17,126 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <div class="flex">
-      <div class="title">
-        <img src="./assets/images/logo.png" alt="Super Position Mario" />
+    <div class="wrapper">
+      <div class="main-content">
+        <div class="title">
+          <img src="./assets/images/logo.png" alt="Super Position Mario" />
+        </div>
+        <div class="border">
+          <main class="background">
+            <button
+              aria-label="Play theme song."
+              onclick="app.theme()"
+              ondblclick="app.themeStop()"
+              class="tv-button"
+            ></button>
+            <button
+              aria-label="Increase brightness"
+              onclick="app.brightness()"
+              class="tv-button brightness-button"
+            ></button>
+            <button
+              aria-label="Colour blindness emulator"
+              ondblclick="app.color()"
+              class="tv-button colorButton"
+            ></button>
+            <button
+              aria-label="Show video of a game winning playoff shot from the Toronto Raptors."
+              onclick="app.kawhi()"
+              class="channelButton"
+            ></button>
+            <button
+              aria-label="Play a visual video of a 'hot cops' meme"
+              onclick="app.hotCops()"
+              class="channelButton2"
+            ></button>
+            <div class="levelBackground pseudoTv">
+              <div class="tv">
+                <img src="./assets/images/80s-tv.png" alt="" />
+              </div>
+              <div class="coin">
+                <img src="./assets/images/coin.gif" alt="" />
+              </div>
+              <div class="target">
+                <img src="./assets/images/target.png" alt="" />
+              </div>
+              <div class="mario">
+                <img src="./assets/images/mario.png" alt="" />
+              </div>
+              <div class="kawhi">
+                <img
+                  src="./assets/images/kawhi9s.gif"
+                  alt="kawhi scoring a game winning shot"
+                />
+              </div>
+              <div class="hotCops hide">
+                <img
+                  class="hotcopsTitle animated jackInTheBox"
+                  src="./assets/images/hotcops.png"
+                  alt=""
+                />
+                <img
+                  class="hotCopsFull"
+                  src="./assets/images/hotcopsgif.gif"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="score">
+              <h2 class="scoreValue"></h2>
+            </div>
+            <h2 class="lives">
+              <span class="life"></span> <span>: Lives</span>
+            </h2>
+            <form action="">
+              <div class="secondarySection">
+                <p class="questions">
+                  Assuming Mario is 'position: absolute' relative to the screen.
+                  Place Mario to the target.
+                </p>
+              </div>
+              <div class="buttonSpacing">
+                <p class="subQuestion1"></p>
+                <label
+                  class="label-question-1 visuallyHidden"
+                  for="firstQuestion"
+                >
+                </label>
+                <select class="firstQuestion" id="firstQuestion">
+                  <option class="subQuestion1Option1"></option>
+                  <option class="subQuestion1Option2"></option>
+                  <option class="subQuestion1Option3"></option>
+                  <option class="subQuestion1Option4"></option>
+                </select>
+              </div>
+              <div class="buttonSpacing">
+                <p class="subQuestion2"></p>
+                <label
+                  class="label-question-2 visuallyHidden"
+                  for="secondQuestion"
+                >
+                </label>
+                <select class="secondQuestion" id="secondQuestion">
+                  <option class="subQuestion2Option1"></option>
+                  <option class="subQuestion2Option2"></option>
+                  <option class="subQuestion2Option3"></option>
+                  <option class="subQuestion2Option4"></option>
+                </select>
+              </div>
+              <input type="submit" value="submit" />
+            </form>
+          </main>
+        </div>
+        <div class="gameboy">
+          <img src="./assets/images/gameboy.png" alt="" />
+        </div>
+        <audio id="coin" src="./assets/audio/coin.wav"></audio>
+        <audio id="wrong" src="./assets/audio/wrong.wav"></audio>
+        <audio id="theme" src="./assets/audio/theme.mp3"></audio>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+        <script src="./js/scripts.js"></script>
+        <script src="./js/colour.js"></script>
       </div>
-      <div class="border">
-        <main class="background">
-          <button
-            aria-label="Play theme song."
-            onclick="app.theme()"
-            ondblclick="app.themeStop()"
-            class="tvButton"
-          ></button>
-          <button
-            aria-label="Colour blindness emulator"
-            onclick="app.color()"
-            class="tvButton colorButton"
-          ></button>
-          <button
-            aria-label="Show video of toronto raptors's last winning shot."
-            onclick="app.kawhi()"
-            class="channelButton"
-          ></button>
-          <button
-            aria-label="Play hot cops commercial."
-            onclick="app.hotCops()"
-            class="channelButton2"
-          ></button>
-          <div class="levelBackground pseudoTv">
-            <div class="tv">
-              <img src="./assets/images/80s-tv.png" alt="" />
-            </div>
-            <div class="coin">
-              <img src="./assets/images/coin.gif" alt="" />
-            </div>
-            <div class="target">
-              <img src="./assets/images/target.png" alt="" />
-            </div>
-            <div class="mario">
-              <img src="./assets/images/mario.png" alt="" />
-            </div>
-            <div class="kawhi">
-              <img
-                src="./assets/images/kawhi9s.gif"
-                alt="kawhi scoring a game winning shot"
-              />
-            </div>
-            <div class="hotCops hide">
-              <img
-                class="hotcopsTitle animated jackInTheBox"
-                src="./assets/images/hotcops.png"
-                alt=""
-              />
-              <img
-                class="hotCopsFull"
-                src="./assets/images/hotcopsgif.gif"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="score">
-            <h2 class="scoreValue"></h2>
-          </div>
-          <h2 class="lives"><span class="life"></span> <span>: Lives</span></h2>
-          <form action="">
-            <div class="secondarySection">
-              <p class="questions">
-                Assuming Mario is 'position: absolute' relative to the screen.
-                Place Mario to the target.
-              </p>
-            </div>
-            <div class="buttonSpacing">
-              <p class="subQuestion1"></p>
-              <label class="visuallyHidden" for="firstQuestion"
-                >The position of the target on the x-axis is 99 out of 100.
-              </label>
-              <select class="firstQuestion" id="firstQuestion">
-                <option class="subQuestion1Option1"></option>
-                <option class="subQuestion1Option2"></option>
-                <option class="subQuestion1Option3"></option>
-                <option class="subQuestion1Option4"></option>
-              </select>
-            </div>
-            <div class="buttonSpacing">
-              <p class="subQuestion2"></p>
-              <label class="visuallyHidden" for="secondQuestion"
-                >The position of the target on the y-axis is 48 out of 100.
-              </label>
-              <select class="secondQuestion" id="secondQuestion">
-                <option class="subQuestion2Option1"></option>
-                <option class="subQuestion2Option2"></option>
-                <option class="subQuestion2Option3"></option>
-                <option class="subQuestion2Option4"></option>
-              </select>
-            </div>
-            <input type="submit" value="submit" />
-          </form>
-        </main>
-      </div>
-      <div class="gameboy">
-        <img src="./assets/images/gameboy.png" alt="" />
-      </div>
-      <audio id="coin" src="./assets/audio/coin.wav"></audio>
-      <audio id="wrong" src="./assets/audio/wrong.wav"></audio>
-      <audio id="theme" src="./assets/audio/theme.mp3"></audio>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-      <script src="./js/scripts.js"></script>
-      <script src="./js/colour.js"></script>
     </div>
   </body>
 </html>
