@@ -1,35 +1,38 @@
 const app = {};
 let score = 0;
-let lives = 10;
+app.lives = 10;
 let time = 0;
 
 const $form = $("form"),
-  $scoreValue = $(".scoreValue"),
+  $scoreValue = $(".score-value"),
   $mario = $(".mario"),
-  $levelBackground = $(".levelBackground"),
+  $levelBackground = $(".level-background"),
   $target = $(".target"),
   $coin = $(".coin"),
   $lives = $(".lives"),
   $life = $(".life"),
-  $subQuestion1 = $(".subQuestion1"),
-  $subQuestion2 = $(".subQuestion2"),
+  $subQuestion1 = $(".sub-question-1"),
+  $subQuestion2 = $(".sub-question-2"),
   $labelQuestion1 = $(".label-question-1"),
   $labelQuestion2 = $(".label-question-2"),
-  $subQuestion1Option1 = $(".subQuestion1Option1"),
-  $subQuestion1Option2 = $(".subQuestion1Option2"),
-  $subQuestion1Option3 = $(".subQuestion1Option3"),
-  $subQuestion1Option4 = $(".subQuestion1Option4"),
-  $subQuestion2Option1 = $(".subQuestion2Option1"),
-  $subQuestion2Option2 = $(".subQuestion2Option2"),
-  $subQuestion2Option3 = $(".subQuestion2Option3"),
-  $subQuestion2Option4 = $(".subQuestion2Option4"),
-  $userInput1 = $(".firstQuestion"),
-  $userInput2 = $(".secondQuestion"),
-  $hotCops = $(".hotCops");
+  $subQuestion1Option1 = $(".sub-question-1-option-1"),
+  $subQuestion1Option2 = $(".sub-question-1-option-2"),
+  $subQuestion1Option3 = $(".sub-question-1-option-3"),
+  $subQuestion1Option4 = $(".sub-question-1-option-4"),
+  $subQuestion2Option1 = $(".sub-question-2-option-1"),
+  $subQuestion2Option2 = $(".sub-question-2-option-2"),
+  $subQuestion2Option3 = $(".sub-question-2-option-3"),
+  $subQuestion2Option4 = $(".sub-question-2-option-4"),
+  $userInput1 = $(".first-question"),
+  $userInput2 = $(".second-question"),
+  $hotCops = $(".hot-cops");
 
 app.setLevel1 = () => {
-  $life.text(lives);
+  $life.text(app.lives);
   setInterval(() => (time += 1), 1000);
+  $mario.css({ left: "14%", bottom: "10%" });
+  $levelBackground.css("background-position", "2% 0");
+  $target.css({ right: "1%", bottom: "48%" });
   $labelQuestion1.html(
     "The position of the target on the y-axis is 104 out of 200."
   );
@@ -445,20 +448,18 @@ app.incrementor = () => {
   coin.play();
 };
 app.incorrect = () => {
-  lives--;
+  app.lives--;
   $scoreValue.html(score);
   wrong.play();
-  if (lives > 0) {
-    $life.text(lives);
-  } else {
-    $("lives").text(`Last Life...`);
-    if (lives === 0) {
-      $("mario").css("scale", "5");
-      alert("you're out of lives! try again!");
-      setTimeout(function() {
-        location.reload();
-      }, 1);
-    }
+  if (app.lives > 0) {
+    $life.text(app.lives);
+  } else if (app.lives === 0) {
+    alert(
+      "Even though you had more lives than a cat 🐈, you still ran ️🏃 out of them all! Try again! 😊"
+    );
+    setTimeout(function() {
+      app.setLevel1();
+    }, 1);
   }
 };
 app.brightness = () => {

@@ -15,13 +15,13 @@ select,
   text-align: center;
   margin: 0 auto;
 }
-.buttonSpacing {
+.button-spacing {
   margin-bottom: 2px;
   display: flex;
   justify-content: space-evenly;
 }
-.channelButton,
-.channelButton2 {
+.channel-button,
+.channel-button-2 {
   background: rgba(0, 0, 0, 0);
   width: 14%;
   position: absolute;
@@ -31,10 +31,10 @@ select,
   z-index: 10;
   border: none;
 }
-.channelButton {
+.channel-button {
   bottom: 26%;
 }
-.channelButton2 {
+.channel-button-2 {
   bottom: 1%;
 }
 .tv-button {
@@ -51,6 +51,6 @@ select,
 .brightness-button {
   bottom: 50px;
 }
-.colorButton {
+.color-button {
   bottom: 5px;
 }

@@ -258,7 +258,7 @@ select,
   margin: 0 auto;
 }
 
-.buttonSpacing {
+.button-spacing {
   margin-bottom: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,8 +268,8 @@ select,
           justify-content: space-evenly;
 }
 
-.channelButton,
-.channelButton2 {
+.channel-button,
+.channel-button-2 {
   background: rgba(0, 0, 0, 0);
   width: 14%;
   position: absolute;
@@ -280,11 +280,11 @@ select,
   border: none;
 }
 
-.channelButton {
+.channel-button {
   bottom: 26%;
 }
 
-.channelButton2 {
+.channel-button-2 {
   bottom: 1%;
 }
 
@@ -304,7 +304,7 @@ select,
   bottom: 50px;
 }
 
-.colorButton {
+.color-button {
   bottom: 5px;
 }
 
@@ -322,7 +322,7 @@ body {
   margin: 2% 10% 7%;
 }
 
-.levelBackground {
+.level-background {
   width: 700px;
   margin: 0 auto;
   background: url(./../assets/images/mario-1-1.gif) no-repeat 0 0;
@@ -404,7 +404,7 @@ main {
   width: 4.5%;
   position: absolute;
   bottom: 10%;
-  left: 100px;
+  left: 14%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -495,14 +495,14 @@ form {
   right: 0;
 }
 
-.hotcopsTitle {
+.hot-cops-title {
   position: absolute;
   bottom: 40%;
   width: 80%;
   margin-left: 10%;
 }
 
-.hotCops {
+.hot-cops {
   display: none;
 }
 
@@ -514,11 +514,11 @@ form {
   display: none;
 }
 
-.hotCopsFull {
+.hot-cops-full {
   height: 100%;
 }
 
-.hotCops {
+.hot-cops {
   position: absolute;
   top: 0;
   bottom: 0;

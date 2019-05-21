@@ -38,19 +38,19 @@
             <button
               aria-label="Colour blindness emulator"
               ondblclick="app.color()"
-              class="tv-button colorButton"
+              class="tv-button color-button"
             ></button>
             <button
               aria-label="Show video of a game winning playoff shot from the Toronto Raptors."
               onclick="app.kawhi()"
-              class="channelButton"
+              class="channel-button"
             ></button>
             <button
               aria-label="Play a visual video of a 'hot cops' meme"
               onclick="app.hotCops()"
-              class="channelButton2"
+              class="channel-button-2"
             ></button>
-            <div class="levelBackground pseudoTv">
+            <div class="level-background pseudoTv">
               <div class="tv">
                 <img src="./assets/images/80s-tv.png" alt="" />
               </div>
@@ -69,58 +69,60 @@
                   alt="kawhi scoring a game winning shot"
                 />
               </div>
-              <div class="hotCops hide">
+              <div class="hot-cops hide">
+                <!-- I had to stray from naming convention for 'animated' and 'jackInTheBox' as these were pre-determined classes in the animate.css library -->
                 <img
-                  class="hotcopsTitle animated jackInTheBox"
+                  class="hot-cops-title animated jackInTheBox"
                   src="./assets/images/hotcops.png"
                   alt=""
                 />
                 <img
-                  class="hotCopsFull"
+                  class="hot-cops-full"
                   src="./assets/images/hotcopsgif.gif"
                   alt=""
                 />
               </div>
             </div>
             <div class="score">
-              <h2 class="scoreValue"></h2>
+              <h2 class="score-value"></h2>
             </div>
             <h2 class="lives">
               <span class="life"></span> <span>: Lives</span>
             </h2>
             <form action="">
-              <div class="secondarySection">
+              <div>
                 <p class="questions">
                   Assuming Mario is 'position: absolute' relative to the screen.
                   Place Mario to the target.
                 </p>
               </div>
-              <div class="buttonSpacing">
-                <p class="subQuestion1"></p>
+              <div class="button-spacing">
+                <p class="sub-question-1"></p>
                 <label
                   class="label-question-1 visuallyHidden"
-                  for="firstQuestion"
+                  for="first-question"
                 >
                 </label>
-                <select class="firstQuestion" id="firstQuestion">
-                  <option class="subQuestion1Option1"></option>
-                  <option class="subQuestion1Option2"></option>
-                  <option class="subQuestion1Option3"></option>
-                  <option class="subQuestion1Option4"></option>
+                <select class="first-question" id="first-question">
+                  <option class="sub-question-1-option-1"></option>
+                  <option class="sub-question-1-option-2"></option>
+                  <option class="sub-question-1-option-3"></option>
+                  <option class="sub-question-1-option-4"></option>
                 </select>
               </div>
-              <div class="buttonSpacing">
-                <p class="subQuestion2"></p>
+              <div class="button-spacing">
+                <p class="sub-question-2"></p>
+                <!-- Strayed form naming convention again for 'visuallyHidden class' -->
                 <label
                   class="label-question-2 visuallyHidden"
-                  for="secondQuestion"
+                  for="second-question"
                 >
                 </label>
-                <select class="secondQuestion" id="secondQuestion">
-                  <option class="subQuestion2Option1"></option>
-                  <option class="subQuestion2Option2"></option>
-                  <option class="subQuestion2Option3"></option>
-                  <option class="subQuestion2Option4"></option>
+                <select class="second-question" id="second-question">
+                  <option class="sub-question-2-option-1"></option>
+                  <option class="sub-question-2-option-2"></option>
+                  <option class="sub-question-2-option-3"></option>
+                  <option class="sub-question-2-option-4"></option>
                 </select>
               </div>
               <input type="submit" value="submit" />

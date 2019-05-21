@@ -10,7 +10,7 @@ body {
   margin: 2% 10% 7%;
 }
 
-.levelBackground {
+.level-background {
   width: 700px;
   margin: 0 auto;
   background: url(./../assets/images/mario-1-1.gif) no-repeat 0 0;
@@ -79,7 +79,7 @@ main {
   width: 4.5%;
   position: absolute;
   bottom: 10%;
-  left: 100px;
+  left: 14%;
   align-self: center;
   animation: reverseSpin 3s;
 }
@@ -155,13 +155,13 @@ form {
   left: 0;
   right: 0;
 }
-.hotcopsTitle {
+.hot-cops-title {
   position: absolute;
   bottom: 40%;
   width: 80%;
   margin-left: 10%;
 }
-.hotCops {
+.hot-cops {
   display: none;
 }
 .display {
@@ -170,10 +170,10 @@ form {
 .hide {
   display: none;
 }
-.hotCopsFull {
+.hot-cops-full {
   height: 100%;
 }
-.hotCops {
+.hot-cops {
   position: absolute;
   top: 0;
   bottom: 0;
