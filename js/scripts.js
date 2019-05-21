@@ -36,7 +36,7 @@ app.level1 = () => {
   $target.css({ right: "1%", bottom: "48%" });
   $levelBackground.css("background-position", "2% 0");
   $labelQuestion1.html(
-    "The position of the target on the y-axis is 104 out of 200."
+    "The position of the target on the y-axis is 96 out of 200."
   );
   $labelQuestion2.html(
     "The position of the target on the x-axis is 198 out of 200."
@@ -73,7 +73,7 @@ app.level2 = () => {
       "The position of the target on the y-axis is 52 out of 200."
     );
     $labelQuestion2.html(
-      "The position of the target on the x-axis is 92 out of 200."
+      "The position of the target on the x-axis is 108 out of 200."
     );
     $subQuestion1.text("bottom: ");
     $subQuestion2.text("right: ");
@@ -103,10 +103,10 @@ app.level3 = () => {
     $levelBackground.css("background-position", "14% 0");
     $target.css({ right: "34.5%", bottom: "34%" });
     $labelQuestion1.html(
-      "The position of the target on the y-axis is 52 out of 200."
+      "The position of the target on the x-axis is 131 out of 200."
     );
     $labelQuestion2.html(
-      "The position of the target on the x-axis is 92 out of 200."
+      "The position of the target on the y-axis is 68 out of 200."
     );
     $subQuestion1.text("right: ");
     $subQuestion2.text("bottom: ");
@@ -135,6 +135,12 @@ app.level4 = () => {
     $mario.css({ left: "5%", bottom: "31%" });
     $levelBackground.css("background-position", "19.5% 0");
     $target.css({ right: `47.5%`, bottom: "41%" });
+    $labelQuestion1.html(
+      "The position of the target on the y-axis is 82 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the x-axis is 105 out of 200."
+    );
     $subQuestion1.text("bottom: ");
     $subQuestion2.text("right: ");
     $subQuestion1Option1.val("21%").html("21%");
@@ -162,6 +168,12 @@ app.level5 = () => {
     $mario.css({ left: "5%", bottom: "38%" });
     $levelBackground.css("background-position", "23.7% 0");
     $target.css({ right: `32.5%`, bottom: "41%" });
+    $labelQuestion1.html(
+      "The position of the target on the x-axis is 135 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the y-axis is 82 out of 200."
+    );
     $subQuestion1.text("right: ");
     $subQuestion2.text("bottom: ");
     $subQuestion1Option1.val("12.5%").html("12.5%");
@@ -189,6 +201,12 @@ app.level6 = () => {
     $levelBackground.css("background-position", "29.5% 0");
     $mario.css({ left: "5%", bottom: "38%" });
     $target.css({ right: `5%`, bottom: "15%" });
+    $labelQuestion1.html(
+      "The position of the target on the x-axis is 190 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the y-axis is 76 out of 200."
+    );
     $subQuestion1.text("right: ");
     $subQuestion2.text("bottom: ");
     $subQuestion1Option1.val("65%").html("65%");
@@ -216,6 +234,12 @@ app.level7 = () => {
     $levelBackground.css("background-position", "37.5% 0");
     $mario.css({ left: "8%", bottom: "10%" });
     $target.css({ right: "19%", bottom: "68%" });
+    $labelQuestion1.html(
+      "The position of the target on the x-axis is 162 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the y-axis is 136 out of 200."
+    );
     $subQuestion1.text("right: ");
     $subQuestion2.text("bottom: ");
     $subQuestion1Option1.val("19%").html("19%");
@@ -243,6 +267,12 @@ app.level8 = () => {
     $levelBackground.css("background-position", "44.5% 0");
     $mario.css({ left: "7%", bottom: "67%" });
     $target.css({ right: `14%`, bottom: "40%" });
+    $labelQuestion1.html(
+      "The position of the target on the x-axis is 172 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the y-axis is 80 out of 200."
+    );
     $subQuestion1.text("right: ");
     $subQuestion2.text("bottom: ");
     $subQuestion1Option1.val("14%").html("14%");
@@ -270,6 +300,12 @@ app.level9 = () => {
     $levelBackground.css("background-position", "52% 0");
     $mario.css({ left: "7%", bottom: "38%" });
     $target.css({ right: `1%`, bottom: "40%" });
+    $labelQuestion1.html(
+      "The position of the target on the x-axis is 198 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the y-axis is 80 out of 200."
+    );
     $subQuestion1.text("right: ");
     $subQuestion2.text("bottom: ");
     $subQuestion1Option1.val("61%").html("61%");
@@ -297,6 +333,12 @@ app.level10 = () => {
     $levelBackground.css("background-position", "60.8% 0");
     $mario.css({ left: "7%", bottom: "38%" });
     $target.css({ right: `21%`, bottom: "70%" });
+    $labelQuestion1.html(
+      "The position of the target on the x-axis is 158 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the y-axis is 140 out of 200."
+    );
     $subQuestion1.text("bottom: ");
     $subQuestion2.text("right: ");
     $subQuestion1Option1.val("70%").html("70%");
@@ -324,6 +366,12 @@ app.level11 = () => {
     $levelBackground.css("background-position", "67.6% 0");
     $mario.css({ left: "7%", bottom: "67%" });
     $target.css({ right: `42%`, bottom: "41%" });
+    $labelQuestion1.html(
+      "The position of the target on the x-axis is 84 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the y-axis is 82 out of 200."
+    );
     $subQuestion1.text("right: ");
     $subQuestion2.text("bottom: ");
     $subQuestion1Option1.val("22%").html("22%");
@@ -351,6 +399,12 @@ app.level12 = () => {
     $levelBackground.css("background-position", "72.4% 0");
     $mario.css({ left: "6%", bottom: "38.5%" });
     $target.css({ right: "12%", bottom: "41%" });
+    $labelQuestion1.html(
+      "The position of the target on the x-axis is 176 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the y-axis is 82 out of 200."
+    );
     $subQuestion1.text("right: ");
     $subQuestion2.text("bottom: ");
     $subQuestion1Option1.val("72%").html("72%");
@@ -378,6 +432,12 @@ app.level13 = () => {
     $levelBackground.css("background-position", "80.2% 0");
     $mario.css({ left: "6%", bottom: "38.5%" });
     $target.css({ right: "12%", bottom: "17%" });
+    $labelQuestion1.html(
+      "The position of the target on the x-axis is 176 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the y-axis is 34 out of 200."
+    );
     $subQuestion1.text("right: ");
     $subQuestion2.text("bottom: ");
     $subQuestion1Option1.val("12%").html("12%");
@@ -405,6 +465,12 @@ app.level14 = () => {
     $levelBackground.css("background-position", "88% 0");
     $mario.css({ left: "6%", bottom: "10%" });
     $target.css({ right: "17%", bottom: "42%" });
+    $labelQuestion1.html(
+      "The position of the target on the x-axis is 166 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the y-axis is 84 out of 200."
+    );
     $subQuestion1.text("right: ");
     $subQuestion2.text("bottom: ");
     $subQuestion1Option1.val("77%").html("77%");
@@ -440,6 +506,12 @@ app.level15 = () => {
     $levelBackground.css("background-position", "95.3% 0");
     $mario.css({ left: "6%", bottom: "38%" });
     $target.css({ right: "17%", bottom: "72%" });
+    $labelQuestion1.html(
+      "The position of the target on the x-axis is 166 out of 200."
+    );
+    $labelQuestion2.html(
+      "The position of the target on the y-axis is 144 out of 200."
+    );
     $subQuestion1.text("bottom: ");
     $subQuestion2.text("right: ");
     $subQuestion1Option1.val("72%").html("72%");
@@ -470,7 +542,6 @@ app.incorrect = () => {
       "Even though you had more lives than a cat 🐈, you still ran ️🏃 out of them all! Next time you'll have a new occasionally levitating friend 🦖 to help you out! Try again! 😊"
     );
     $(".mario img").attr("src", "./assets/images/yoshi.png");
-
     $mario.css("width", "20%");
     setTimeout(function() {
       app.score = 0;
