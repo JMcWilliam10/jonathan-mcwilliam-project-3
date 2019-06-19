@@ -21,8 +21,7 @@ const $form = $("form"),
   $subQuestion2Option3 = $(".sub-question-2-option-3"),
   $subQuestion2Option4 = $(".sub-question-2-option-4"),
   $userInput1 = $(".first-question"),
-  $userInput2 = $(".second-question"),
-  $hotCops = $(".hot-cops");
+  $userInput2 = $(".second-question");
 
 app.score = 0;
 
@@ -573,22 +572,6 @@ app.kawhi = () => {
     $scoreValue.css("display", "block");
     $lives.css("display", "block");
   }, 9000);
-};
-
-app.hotCops = () => {
-  $hotCops.css("display", "block");
-  $mario.css("display", "none");
-  $target.css("display", "none");
-  $coin.css("display", "none");
-  $scoreValue.css("display", "none");
-  $lives.css("display", "none");
-  setTimeout(function() {
-    $hotCops.css("display", "none");
-    $mario.css("display", "block");
-    $target.css("display", "block");
-    $coin.css("display", "block");
-    $lives.css("display", "block");
-  }, 12000);
 };
 
 app.init = () => {
